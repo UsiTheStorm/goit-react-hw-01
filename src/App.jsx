@@ -1,14 +1,14 @@
 import React from 'react';
 
+import './App.css';
+
 import Profile from './components/Profile/Profile';
 import FriendList from './components/FriendList/FriendList';
-
-import './App.css';
+import transactions from './data/transactions.json';
 
 import userData from './data/userData.json';
 import friends from './data/friends.json';
-
-console.log(friends);
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 
 function App() {
   return (
@@ -17,6 +17,8 @@ function App() {
       <Profile user={userData} />
       <h2>Friends list</h2>
       <FriendList friends={friends} />
+      <h2>Transaction Histiy</h2>
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 }
