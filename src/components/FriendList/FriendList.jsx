@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import styles from './FriendList.module.scss';
 
 function FriendListItem({ friend: { avatar, name, isOnline } }) {
@@ -5,12 +6,13 @@ function FriendListItem({ friend: { avatar, name, isOnline } }) {
     <li className={styles.friendCard}>
       <img src={avatar} alt={name} width="48" />
       <p className={styles.friendCardName}>{name}</p>
-      <p className={styles.friendCardStatus}>
-        {isOnline ? (
-          <span className={styles.online}>Online</span>
-        ) : (
-          <span className={styles.offline}>Offline</span>
-        )}
+      <p
+        className={clsx(styles.friendCardStatus, {
+          [styles.online]: isOnline,
+          [styles.offline]: !isOnline,
+        })}
+      >
+        {isOnline ? 'Online' : 'Offline'}
       </p>
     </li>
   );
