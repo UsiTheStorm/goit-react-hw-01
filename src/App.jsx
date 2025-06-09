@@ -5,12 +5,12 @@ import Profile from './components/Profile/Profile';
 import './App.css';
 import userData from './userData.json';
 
-console.log(userData);
+// console.log(userData);
 
 function App() {
   return (
     <div>
-      <Profile />
+      <Profile user={userData} />
     </div>
   );
 }
