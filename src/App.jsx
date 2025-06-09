@@ -4,9 +4,11 @@ import Profile from './components/Profile/Profile';
 import FriendList from './components/FriendList/FriendList';
 
 import './App.css';
-import userData from './data/userData.json';
 
-// console.log(userData);
+import userData from './data/userData.json';
+import friends from './data/friends.json';
+
+console.log(friends);
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
       <h2>User profile</h2>
       <Profile user={userData} />
       <h2>Friends list</h2>
-      <FriendList />
+      <FriendList friends={friends} />
     </div>
   );
 }
