@@ -1,27 +1,35 @@
-import './Profile.scss';
+import styles from './Profile.module.scss';
 
-function Profile({ user: { username, tag, location, avatar, stats } }) {
+function Profile({
+  user: {
+    username,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  },
+}) {
   return (
-    <div className="user-card">
-      <div className="user-card__body">
-        <img className="user-card__avatar" src={avatar} alt={username} />
-        <p className="user-card__name">{username}</p>
-        <p className="user-card__info">@{tag}</p>
-        <p className="user-card__info">{location}</p>
+    <div className={styles.userCard}>
+      <div className={styles.userCardBody}>
+        <img className={styles.userCardAvatar} src={avatar} alt={username} />
+        <p className={styles.userCardName}>{username}</p>
+        <p className={styles.userCardInfo}>@{tag}</p>
+        <p className={styles.userCardInfo}>{location}</p>
       </div>
 
-      <ul className="user-card__stats stats">
+      <ul className={styles.stats}>
         <li>
-          <span className="stats__label">Followers</span>
-          <span className="stats__value">{stats.followers}</span>
+          <span className={styles.statsLabel}>Followers</span>
+          <span className={styles.statsValue}>{followers}</span>
         </li>
         <li>
-          <span className="stats__label">Views</span>
-          <span className="stats__value">{stats.views}</span>
+          <span className={styles.statsLabel}>Views</span>
+          <span className={styles.statsValue}>{views}</span>
         </li>
         <li>
-          <span className="stats__label">Likes</span>
-          <span className="stats__value">{stats.likes}</span>
+          <span className={styles.statsLabel}>Likes</span>
+          <span className={styles.statsValue}>{likes}</span>
         </li>
       </ul>
     </div>
