@@ -19,7 +19,6 @@ function FriendListItem({ friend: { avatar, name, isOnline } }) {
 }
 
 function FriendList({ friends }) {
-  console.log('freeeeeee', { friends });
   return (
     <ul className={styles.friendList}>
       {friends.map((friend) => (
