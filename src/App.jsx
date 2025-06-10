@@ -12,7 +12,7 @@ import TransactionHistory from './components/TransactionHistory/TransactionHisto
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <h2>User profile</h2>
       <Profile user={userData} />
       <h2>Friends list</h2>
