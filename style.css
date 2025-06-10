@@ -21,8 +21,13 @@ p {
   margin: 0;
 }
 
-.container {
+h1 {
   text-align: center;
+  padding-top: 32px;
+}
+
+.container {
+  /* text-align: center; */
   max-width: 375px;
   padding: 16px;
   margin-left: auto;

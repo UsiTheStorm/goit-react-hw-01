@@ -12,20 +12,16 @@ import TransactionHistory from './components/TransactionHistory/TransactionHisto
 
 function App() {
   return (
-    <>
-      <div className="container">
-        <h1>User profile</h1>
-        <Profile user={userData} />
-      </div>
-      <div className="container">
-        <h1>Friends list</h1>
-        <FriendList friends={friends} />
-      </div>
-      <div className="container">
-        <h1>Transaction Histiy</h1>
-        <TransactionHistory transactions={transactions} />
-      </div>
-    </>
+    <div className="container">
+      <h1>User profile</h1>
+      <Profile user={userData} />
+
+      <h1>Friends list</h1>
+      <FriendList friends={friends} />
+
+      <h1>Transaction Histiy</h1>
+      <TransactionHistory transactions={transactions} />
+    </div>
   );
 }
 
