@@ -23,8 +23,15 @@
   }
 
   &Status {
-    font-size: 18px;
-    margin-bottom: 8px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
   }
+}
+
+.online {
+  color: rgb(19, 183, 4);
+}
+
+.offline {
+  color: rgb(223, 42, 42);
 }
