@@ -1,0 +1,36 @@
+.transactionTable {
+  width: 100%;
+  color: black;
+  border: 1px solid black;
+  border-collapse: collapse;
+  max-width: 700px;
+
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  td {
+    padding: 4px 18px;
+  }
+
+  &Head {
+    background-color: #2a2a2a;
+    color: #fff;
+
+    th {
+      text-align: center;
+      font-size: 16px;
+      padding: 8px;
+    }
+  }
+
+  &Body {
+    padding: 4px;
+    background-color: #fff;
+
+    tr:nth-child(even) {
+      background-color: #a2a2a2;
+    }
+  }
+}
