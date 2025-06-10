@@ -1,11 +1,18 @@
 import styles from './TransactionHistory.module.scss';
 
+function capitalizeFirstLetter(str) {
+  if (typeof str === 'string' && str.length > 0) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  }
+  return str;
+}
+
 function Transaction({ transaction: { type, amount, currency } }) {
   return (
     <tr>
-      <td>{type}</td>
+      <td>{capitalizeFirstLetter(type)}</td>
       <td>{amount}</td>
-      <td>{currency}</td>
+      <td>{currency.toUpperCase().trim()}</td>
     </tr>
   );
 }
