@@ -4,7 +4,7 @@ import styles from './FriendList.module.scss';
 function FriendListItem({ friend: { avatar, name, isOnline } }) {
   return (
     <li className={styles.friendCard}>
-      <img src={avatar} alt={name} width="48" />
+      <img src={avatar} alt={name} width={80} />
       <p className={styles.friendCardName}>{name}</p>
       <p
         className={clsx(styles.friendCardStatus, {
